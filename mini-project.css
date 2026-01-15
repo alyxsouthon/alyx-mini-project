@@ -1,0 +1,17 @@
+.board {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+/*how to stop buttons from stretching with the page?*/
+
+button {
+  padding: 100px 100px;
+  background-color:cornflowerblue;
+  border-radius: 25px;
+  width: 300px;
+  height: 300px;
+  font-size: x-large;
+}

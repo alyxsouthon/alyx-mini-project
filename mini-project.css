@@ -1,6 +1,6 @@
 .board {
   display: grid;
-  width: 100%;
+  width: 50%;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr)
 }
@@ -9,9 +9,9 @@
 
 button {
   padding: 100px 100px;
-  background-color:cornflowerblue;
+  background-color:rgb(163, 164, 167);
   border-radius: 25px;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   font-size: x-large;
 }

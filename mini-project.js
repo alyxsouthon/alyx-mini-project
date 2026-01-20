@@ -48,12 +48,12 @@ function handleClick(row, col, btn){
 
 const box = document.getElementById('box');
 
-function gameOver() {
-    if (board[0][1] === board[0][0] && board[0][1] === board[0][2] != "") {
-        gameWon = True
-    }
-    if gameWon
-}
+// function gameOver() {
+//     if (board[0][1] === board[0][0] && board[0][1] === board[0][2] != "") {
+//         gameWon = True
+//     }
+//     if gameWon
+// }
 
 // const winConds = [
 //     [0, 1, 2],

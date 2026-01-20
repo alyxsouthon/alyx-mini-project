@@ -48,13 +48,16 @@ function handleClick(row, col, btn){
 
 const box = document.getElementById('box');
 
-// function gameOver() {
-//     if (board[0][1] === board[0][0] && board[0][1] === board[0][2] != "") {
-//         gameWon = True
-//     }
-//     if gameWon
-// }
+//trying to make something work for one row. in the browser I can see the 
+// board array being updated but this isn't logging "Winner" when they're all the same?
+function gameOver() {
+    if (board[0][1] === board[0][0] && board[0][1] === board[0][2]) {
+        console.log("Winner")
+    }
+}
 
+//This is something that Darshan told me to have a think about, 
+// unsure how to compare this to the board array
 // const winConds = [
 //     [0, 1, 2],
 //     [3, 4, 5],

@@ -7,7 +7,7 @@ let board = [
     [" ", " ", " "]
 ]
 
-
+let gameWon = false
 
 let currentPlayer = "X"
 let counter = 0
@@ -46,20 +46,23 @@ function handleClick(row, col, btn){
     console.log(board)
 }
 
-//function checkWinner(){
 const box = document.getElementById('box');
 
-//}
-if(// horizontal win
-    board[0][0] === board[0][1] === board[0][2],
-    board[1][0] === board[1][1] === board[1][2],
-    board[2][0] === board[2][1] === board[2][2],
-    // vertical win
-    board[0][0] === board[1][0] === board[2][0],
-    board[0][1] === board[1][1] === board[2][1],
-    board[0][2] === board[1][2] === board[2][2],
-    // diagonal win
-    board[0][0] === board[1][1] === board[2][2],
-    board[0][2] === board[1][1] === board[2][0]);{
-        box.textContent = 'We have a winner!'
+function gameOver() {
+    if (board[0][1] === board[0][0] && board[0][1] === board[0][2] != "") {
+        gameWon = True
     }
+    if gameWon
+}
+
+// const winConds = [
+//     [0, 1, 2],
+//     [3, 4, 5],
+//     [6, 7, 8],
+//     [0, 3, 6],
+//     [1, 4, 7],
+//     [2, 5, 8],
+//     [0, 4, 8],
+//     [2, 4, 6]
+// ]
+

@@ -35,8 +35,10 @@ function handleClick(row, col, btn){
         btn.textContent = "O"
     };
 
+    //checkWinner() or currentPlayer? Something?
+
     counter++
-    if (counter%2 === 0){
+    if (counter % 2 === 0){
         currentPlayer = "X"
     }
     else{
@@ -48,24 +50,44 @@ function handleClick(row, col, btn){
 
 const box = document.getElementById('box');
 
-//trying to make something work for one row. in the browser I can see the 
-// board array being updated but this isn't logging "Winner" when they're all the same?
-function gameOver() {
-    if (board[0][1] === board[0][0] && board[0][1] === board[0][2]) {
+
+function checkWinner(currentPlayer) {
+    //upper row
+    if (board[0][1] === board[0][0] && board[0][1] === board[0][2] !== "") {
         console.log("Winner")
+        alert(`Winner! Player ${currentPlayer} wins`)
     }
+    //lower row
+    if (board[2][1] === board[2][0] && board[2][1] === board[2][2] !== "") {
+        console.log("Winner")
+        alert(`Winner! Player ${currentPlayer} wins`)
+    }
+    //left column
+    if (board[1][0] === board[0][0] && board[1][0] === board[2][0] !== "") {
+        console.log("Winner")
+        alert(`Winner! Player ${currentPlayer} wins`)
+    }
+    //right column
+    if (board[1][2] === board[0][2] && board[1][2] === board[2][2] !== "") {
+        console.log("Winner")
+        alert(`Winner! Player ${currentPlayer} wins`)
+    }
+    //centre column and row
+    if (board[1][1] !== "" &&
+        (board[1][1] === board[0][1] && board[1][1] === board[2][1]) ||
+        (board[1][1] === board[1][0] && board[1][1] === board[1][2])
+    ) {
+        console.log("Winner")
+        alert(`Winner! Player ${currentPlayer} wins`)
+    }
+    //diagonals
+    if (board[1][1] !== "" &&
+        (board[1][1] === board[0][0] && board[1][1] === board[2][2]) ||
+        (board[1][1] === board[0][2] && board[1][1] === board[2][0])
+    ) {
+        console.log("Winner")
+        alert(`Winner! Player ${currentPlayer} wins`)
+    }    
 }
 
-//This is something that Darshan told me to have a think about, 
-// unsure how to compare this to the board array
-// const winConds = [
-//     [0, 1, 2],
-//     [3, 4, 5],
-//     [6, 7, 8],
-//     [0, 3, 6],
-//     [1, 4, 7],
-//     [2, 5, 8],
-//     [0, 4, 8],
-//     [2, 4, 6]
-// ]
 

@@ -27,15 +27,15 @@ function handleClick(row, col, btn){
     board[row][col] = "X"
     // If the player is X, put X in the box. If the player is O, put O in the box. 
     if (currentPlayer === "X"){
-        board[row][col] = "X"
         btn.textContent = "X"
+        board[row][col] = "X"
     }
     else {
-        board[row][col] = "O"
         btn.textContent = "O"
+        board[row][col] = "O"
     };
 
-    //checkWinner() or currentPlayer? Something?
+    checkWinner(currentPlayer)
 
     counter++
     if (counter % 2 === 0){
@@ -45,48 +45,56 @@ function handleClick(row, col, btn){
         currentPlayer = "O"
     }
     
-    console.log(board)
+    //console.log(board)
 }
 
-const box = document.getElementById('box');
+const box = document.getElementById('box')
 
 
 function checkWinner(currentPlayer) {
     //upper row
-    if (board[0][1] === board[0][0] && board[0][1] === board[0][2] !== "") {
+    if (board[0][1] === board[0][0] && board[0][1] === board[0][2] && board[0][2] !== " ") {
         console.log("Winner")
-        alert(`Winner! Player ${currentPlayer} wins`)
+        box.style.display = "block"
+        box.textContent = `Game over! Player ${currentPlayer} wins!`
     }
     //lower row
-    if (board[2][1] === board[2][0] && board[2][1] === board[2][2] !== "") {
+    if (board[2][1] === board[2][0] && board[2][1] === board[2][2] && board[2][2] !== " ") {
         console.log("Winner")
-        alert(`Winner! Player ${currentPlayer} wins`)
+        box.style.display = "block"
+        box.textContent = `Game over! Player ${currentPlayer} wins!`
     }
     //left column
-    if (board[1][0] === board[0][0] && board[1][0] === board[2][0] !== "") {
+    if (board[1][0] === board[0][0] && board[1][0] === board[2][0] && board[2][0] !== " ") {
         console.log("Winner")
-        alert(`Winner! Player ${currentPlayer} wins`)
+        box.style.display = "block"
+        box.textContent = `Game over! Player ${currentPlayer} wins!`
     }
     //right column
-    if (board[1][2] === board[0][2] && board[1][2] === board[2][2] !== "") {
+    if (board[1][2] === board[0][2] && board[1][2] === board[2][2] && board[2][2] !== " ") {
         console.log("Winner")
-        alert(`Winner! Player ${currentPlayer} wins`)
+        box.style.display = "block"
+        box.textContent = `Game over! Player ${currentPlayer} wins!`
     }
     //centre column and row
-    if (board[1][1] !== "" &&
+    if (board[1][1] !== " " &&
         (board[1][1] === board[0][1] && board[1][1] === board[2][1]) ||
+        board[1][1] !== " " &&
         (board[1][1] === board[1][0] && board[1][1] === board[1][2])
     ) {
         console.log("Winner")
-        alert(`Winner! Player ${currentPlayer} wins`)
+        box.style.display = "block"
+        box.textContent = `Game over! Player ${currentPlayer} wins!`
     }
     //diagonals
-    if (board[1][1] !== "" &&
+    if (board[1][1] !== " " &&
         (board[1][1] === board[0][0] && board[1][1] === board[2][2]) ||
+        board[1][1] !== " " &&
         (board[1][1] === board[0][2] && board[1][1] === board[2][0])
     ) {
         console.log("Winner")
-        alert(`Winner! Player ${currentPlayer} wins`)
+        box.style.display = "block"
+        box.textContent = `Game over! Player ${currentPlayer} wins!`
     }    
 }
 

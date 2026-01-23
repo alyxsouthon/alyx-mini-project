@@ -24,8 +24,9 @@ const button = document.querySelectorAll("button")
 // });
 
 function handleClick(row, col, btn){
-    board[row][col] = "X"
-    // If the player is X, put X in the box. If the player is O, put O in the box. 
+
+    board[row][col] = "X" 
+
     if (currentPlayer === "X"){
         btn.textContent = "X"
         board[row][col] = "X"
@@ -98,4 +99,20 @@ function checkWinner(currentPlayer) {
     }    
 }
 
+// function checkWinner() {
+//     board.forEach(checkIndex)
+// }
+
+// function checkIndex() {
+//     if (board[i][j] === board[i][j-1] && board[i][j] === board[i][j+1] && board[i][j+1] !== " ") {
+//         console.log("Winner")
+//         box.style.display = "block"
+//         box.textContent = `Game over! Player ${currentPlayer} wins!`
+//         }
+// }
+
+//horizontal rows
+// forEach((board[i][j]) => {
+//     if (board[i][j] !== " " && board[i][j])
+// })
 

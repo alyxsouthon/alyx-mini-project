@@ -1,6 +1,8 @@
 h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+  color:cornflowerblue;
+  text-shadow: 2px 2px #272727;
+  margin-left: 170px;
 }
 
 .board {
@@ -14,9 +16,9 @@ h1 {
 
 button {
   padding: 100px 100px;
-  background-color:lightgoldenrodyellow;
+  background-color:rgb(181, 245, 245);
   border-radius: 25px;
-  border-color:darkorange;
+  border-color:teal;
   width: 100px;
   height: 100px;
   font-size: x-large;

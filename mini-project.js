@@ -1,20 +1,14 @@
-console.log("Hello!")
-
-
 let board = [
     [" ", " ", " "], 
     [" ", " ", " "], 
     [" ", " ", " "]
 ]
 
-let gameWon = false
-
 let currentPlayer = "X"
 let counter = 0
-const button = document.querySelectorAll("button")
 
 // changing colours of button when hovering over. doesn't work with qSA?
-// const buttonColour = document.querySelectorAll("button");
+// const button = document.querySelectorAll("button")
 // buttonColour.addEventListener('mouseover', () => {
 //     buttonColour.style.opacity = '0.7';
 // });
@@ -45,8 +39,7 @@ function handleClick(row, col, btn){
     else{
         currentPlayer = "O"
     }
-    
-    //console.log(board)
+   
 }
 
 const box = document.getElementById('box')

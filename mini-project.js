@@ -1,3 +1,5 @@
+//this is a change for git kata 8
+
 let board = [
     [" ", " ", " "], 
     [" ", " ", " "], 

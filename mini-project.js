@@ -1,3 +1,4 @@
+//this is a change for git kata 8
 //addition for git kata 11
 
 let board = [
